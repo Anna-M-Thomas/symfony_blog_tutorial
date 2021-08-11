@@ -1,3 +1,7 @@
 index:
   path: /
   controller: App\Controller\BlogController::index
+
+blog_test:
+  path: /blog
+  controller: App\Controller\BlogController::test

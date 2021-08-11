@@ -33,6 +33,13 @@ class Post
     private $content;
 
     /**
+     * @ORM\Column(type="text")
+     * @Assert\NotBlank()
+     * @Assert\Length(min="10")
+     */
+    private $banana;
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $created_at;
@@ -62,6 +69,18 @@ class Post
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getBanana(): ?string
+    {
+        return $this->banana;
+    }
+
+    public function setBanana(string $banana): self
+    {
+        $this->banana = $banana;
 
         return $this;
     }

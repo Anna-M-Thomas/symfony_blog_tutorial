@@ -123,5 +123,10 @@ class BlogController extends AbstractController
 
         return $this->redirectToRoute('blog_index');
     }
+
+    public function test(): Response
+    {
+        return $this->render('blog/test.html.twig');
+    }
    
 }
